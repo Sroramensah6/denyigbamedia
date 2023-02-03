@@ -1,4 +1,4 @@
-// component 
+// Components
 import { Post_Template } from '../../../components'
 
 // get data

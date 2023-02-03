@@ -43,7 +43,7 @@ export default function Footer() {
     const router = useRouter()
     
     return (
-        <footer className="p-4 bg-[#0e2b19] border-y sm:p-6 sm:pb-4">
+        <footer className="p-4 bg-[#0e2b19] border-y sm:p-6 sm:pb-4 mt-10 md:mt-36 end">
             <div className="md:flex md:justify-between">
                 <div className={styles.logoContainer}>
                     <Link href="https://flowbite.com/" className="flex items-center">
