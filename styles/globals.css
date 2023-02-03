@@ -28,8 +28,8 @@ p img {
 
 p em {
   display: block;
-  background-color: #ededed;
-  color: #5a5a5a;
+  /* background-color: #ededed; */
+  /* color: #5a5a5a; */
   left: 0;
   padding: 10px;
   height: auto;

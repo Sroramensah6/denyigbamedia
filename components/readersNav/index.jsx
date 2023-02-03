@@ -7,7 +7,7 @@ import { BsPencilSquare } from 'react-icons/bs'
 import { HiOutlineHome } from 'react-icons/hi'
 
 // img
-import Qazi from '../../images/qazi.jpeg'
+// import Qazi from '../../images/qazi.jpeg'
 import smallLogo from '../../images/smallLogo.png'
 import Link from 'next/link'
 
@@ -40,11 +40,11 @@ export default function ReadersNav() {
                 <BsPencilSquare />
             </div>
             <div className={styles.profileImageContainer}>
-                <Image
+                {/* <Image
                     alt='qazi'
                     src={Qazi}
                     className={styles.profileImage}
-                />
+                /> */}
             </div>
         </div>
     )

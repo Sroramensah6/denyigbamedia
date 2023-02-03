@@ -5,26 +5,26 @@ export const main_link = [
     },
     {
         title: 'Nyadzɔdzɔwo',
-        route: '/nyadzodzowo',
+        route: '/category/nyadzodzowo',
     },
     {
         title: 'Lãmesẽ',
-        route: '/lamese',
+        route: '/category/lamese',
     },
     {
         title: 'Asitsanyawo',
-        route: '/asitsanyawo',
+        route: '/category/asitsanyawo',
     },
     {
         title: 'Míadekɔnu',
-        route: '/miadekonu',
+        route: '/category/miadekonu',
     },
     {
         title: 'Dutanyawo',
-        route: '/dutanyawo',
+        route: '/category/dutanyawo',
     },
     {
         title: 'Kamedefefe',
-        route: '/kamedefefe',
+        route: '/category/kamedefefe',
     },
 ] 

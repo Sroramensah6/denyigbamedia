@@ -7,11 +7,13 @@ const styles = {
 }
 
 export default function Post({ postData, Category }) {
+    const origin = typeof document !== 'undefined' && document.location.href ? document.location.href : ''
+
     return (
         <Layout siteTitle={postData.title} description={postData.body_summary} image={postData.headerImage} >
             <div className={styles.content}>
-                <Article data={postData} />
-                <Recommendations data={Category} />
+                <Article data={postData} origin={origin} />
+                <Recommendations data={Category.slice(0, 5)} />
             </div>
         </Layout>
     )

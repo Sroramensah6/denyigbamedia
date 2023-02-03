@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 
 import banner from '../../images/icon.png'
@@ -20,7 +21,11 @@ export default function Banner() {
                         Míaƒe kɔnu kple dekɔnuwo nye dzeside tɔxɛ na dukɔ bliboa eye
                         mía degbewo wɔa akpa vevi aɖe le go sia me.
                     </h3>
-                    <button className={styles.accentedButton}>Start Reading</button>
+                    <button className={styles.accentedButton}>
+                        <Link href={'/miafe-tadodzinu-ewe'}>
+                            Start Reading
+                        </Link>
+                    </button>
                 </div>
                 <Image 
                     width={500}

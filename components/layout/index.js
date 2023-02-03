@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Footer from '../footer'
 
-import Header from '../header'
-import Example from '../nav'
+import Header from '../nav'
 // import Example from '../nav'
 
 export default function Layout({ children, home, siteTitle, description, image }) {
@@ -27,8 +26,7 @@ export default function Layout({ children, home, siteTitle, description, image }
 
                 <title>{siteTitle}</title>
             </Head>
-            {/* <Header /> */}
-            <Example />
+            <Header />
             <main>{children}</main>
             <Footer />
         </div>

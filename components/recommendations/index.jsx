@@ -21,14 +21,14 @@ const styles = {
     recommendationsContainer: `mt-0`,
     articlesContainer: `my-[2rem]`,
     articlesContentWrapper: `flex items-center justify-between cursor-pointer my-[1rem]`,
-    articlesContent: `flex-[4] md:flex-[2]`,
+    articlesContent: `flex-[4] md:flex-[2] pr-2`,
     recommendationAuthorContainer: `flex items-center gap-[.6rem]`,
     recommendationAuthorName: `text-sm`,
-    recommendationTitle: `font-bold text-base`,
+    recommendationTitle: `font-bold text-sm`,
     titleContainer: ``,
     title: `text-[2rem] font-mediumSerif text-[#0e2b19]`,
-    recommendationThumbnailContainer: `flex flex-1 items-center justify-center h-[6rem] w-[6rem]`,
-    recommendationThumbnail: `object-cover w-[6rem]`,
+    recommendationThumbnailContainer: `flex flex-1 items-center justify-center h-[6rem] w-[6rem] overflow-hidden`,
+    recommendationThumbnail: `object-cover`,
     detailsContainer: `hidden xl:flex items-center justify-between text-[#787878]`,
     category: `bg-[#F2F3F2] rounded-full font-mediumSerif`,
     articleDetails: `my-2 text-[.8rem] font-mediumSerif`,
@@ -61,9 +61,9 @@ export default function Recommendations ({ data }) {
                                     <Image
                                         width={500}
                                         height={400} 
-                                        alt={article.title}
+                                        alt={'article Image'}
                                         src={article.headerImage}
-                                        // className={styles.recommendationThumbnail}
+                                        className={styles.recommendationThumbnail}
                                     />
                                 </div>
                             </div>

@@ -45,6 +45,7 @@ module.exports = {
       mediumSerifItalic: ['CharterItalic'],
       mediumSerifBold: ['CharterBold'],
       mediumSerif: ['Charter'],
+      mediumCursive: ['cursive'],
     },
     extend: {},
   },

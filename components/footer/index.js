@@ -41,6 +41,7 @@ const styles = {
 
 export default function Footer() {
     const router = useRouter()
+    
     return (
         <footer className="p-4 bg-[#0e2b19] border-y sm:p-6 sm:pb-4">
             <div className="md:flex md:justify-between">
@@ -55,48 +56,66 @@ export default function Footer() {
                         />
                     </Link>
                 </div>
-                <div className="grid grid-cols-3 gap-8 sm:gap-2 sm:grid-cols-3">
+                <div>
+                <h2 className="mb-4 font-semibold text-[1rem] md:text-[1.4rem] lg:text-2xl uppercase text-[#F2F3F2] font-mediumSerif ">
+                    Teƒe veviawo
+                    <span className='border-b border-[#F2F3F2] mt-1 border-2 flex w-10'></span>
+                </h2>
+
+                <div className="grid grid-cols-3 gap-8 sm:gap-8 sm:grid-cols-3">
                     <div>
-                        <h2 className="mb-4 font-semibold text-[1rem] md:text-[1.4rem] lg:text-2xl uppercase text-[#F2F3F2] font-mediumSerif ">
-                            Teƒe veviawo
-                            <span className='border-b border-[#F2F3F2] mt-1 border-2 flex w-10'></span>
-                        </h2>
                         <ul className="text-[#F2F3F2] space-y-4 font-mediumSerif">
                             {main_link.slice(0, 3).map((link, index) => (
                                 <li key={index}>
-                                    <Link href={link.route} className={`${styles.text} ${router.pathname == link.route ? 'opacity-50 border-b' : ''}`}>{link.title}</Link>
+                                    <Link
+                                        href={link.route}
+                                        className={`${router.pathname === link.route ? 'bg-[#F2F3F2] text-[#0e2b19]' : 'text-[#F2F3F2] hover:bg-[#F2F3F2] hover:text-[#0e2b19]'} px-3 py-2 rounded-md text-sm font-medium font-mediumSerif`}
+                                    >
+                                        {link.title}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div>
-                        <h2 className="mb-7 text-sm font-semibold text-[#0e2b19] uppercase">d</h2>
+                        {/* <h2 className="mb-7 text-sm font-semibold text-[#0e2b19] uppercase">d</h2> */}
                         <ul className="text-[#F2F3F2] space-y-4 font-mediumSerif">
                             {main_link.slice(3, 5).map((link, index) => (
                                 <li key={index}>
-                                    <Link  href={link.route} className={`${styles.text} ${router.pathname == link.route ? 'opacity-50 border-b' : ''}`}>{link.title}</Link>
+                                    <Link href={link.route}
+                                        className={`${router.pathname === link.route ? 'bg-[#F2F3F2] text-[#0e2b19]' : 'text-[#F2F3F2] hover:bg-[#F2F3F2] hover:text-[#0e2b19]'} px-3 py-2 rounded-md text-sm font-medium font-mediumSerif`}
+                                    >
+                                        {link.title}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div>
-                        <h2 className="mb-7 text-sm font-semibold text-[#0e2b19] uppercase">u</h2>
+                        {/* <h2 className="mb-7 text-sm font-semibold text-[#0e2b19] uppercase">u</h2> */}
                         <ul className="text-[#F2F3F2] space-y-4 font-mediumSerif">
                             {main_link.slice(5, 7).map((link, index) => (
                                 <li key={index}>
-                                    <Link href={link.route} className={`${styles.text} ${router.pathname == link.route ? 'opacity-50 border-b' : ''}`}>{link.title}</Link>
+                                    <Link 
+                                        href={link.route} 
+                                        className={`${router.pathname === link.route ? 'bg-[#F2F3F2] text-[#0e2b19]' : 'text-[#F2F3F2] hover:bg-[#F2F3F2] hover:text-[#0e2b19]'} px-3 py-2 rounded-md text-sm font-medium font-mediumSerif`}
+                                    >
+                                        {link.title}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
+                </div>
             </div>
             <hr className="my-8 border-[#F2F3F2] sm:mx-auto lg:my-4" />
-            <div className="sm:flex sm:items-center sm:justify-between  font-mediumSerif">
-                <span className="text-sm sm:text-center dark:text-[#F2F3F2]">
+            {/* <div className="sm:flex sm:items-center sm:justify-between  font-mediumSerif"> */}
+            <div className="flex flex-1 items-center font-mediumSerif">
+                <span className="text-xs text-center text-[#F2F3F2]">
                     ©  {new Date().getFullYear()}. All Right Reserved & Powered by MotherTongue® Media Consult.
                 </span>
-                <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                {/* <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                     <div className={styles.socials}>
                         <div className='hover:text-[#1DA1F2] hover:opacity-60'>
                             <IoLogoTwitter />
@@ -111,7 +130,7 @@ export default function Footer() {
                             <AiOutlineWhatsApp />
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </footer>
         

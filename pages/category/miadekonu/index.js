@@ -1,8 +1,8 @@
 // component 
-import { Post_Template } from '../../components'
+import { Post_Template } from '../../../components'
 
 // get data
-import { getCategoryPostsData } from '../../lib/posts'
+import { getCategoryPostsData } from '../../../lib/posts'
   
 export default function Miadekonu({ allPostsData }) {
     return <Post_Template siteTitle={'Denyigba Media - Míadekɔnu'} allPostsData={allPostsData} title={'Míadekɔnu'} />
