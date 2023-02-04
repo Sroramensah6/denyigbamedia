@@ -13,7 +13,7 @@ import Link from 'next/link'
 
 const styles = {
     wrapper: `flex items-center justify-center flex-[3] border-l border-r`,
-    content: `h-screen overflow-scroll p-[2rem] w-full pt-0`,
+    content: `h-auto md:h-screen overflow-visible md:overflow-scroll p-[2rem] w-full pt-0`,
     postHeaderContainer: `block md:flex justify-between items-center mt-[2.2rem] mb-[1.2rem]`,
     authorContainer: `flex gap-[1rem]`,
     authorProfileImageContainer: `h-[3rem] w-[3rem] grid center rounded-full overflow-hidden`,
@@ -45,7 +45,7 @@ export default function Article({ data, origin }) {
                         </div>
                     </div>
                     <div className={styles.socials}>
-                        <div className='hover:text-[#1DA1F2] hover:opacity-60'>
+                        <div className='hover:text-[#1DA1F2] hover:opacity-60 overflow-visible'>
                             <TwitterShareButton url={origin} title={data.title}>
                                 <IoLogoTwitter />
                             </TwitterShareButton>
