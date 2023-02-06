@@ -8,7 +8,7 @@ export default function Kamedefefe({ allPostsData }) {
     return <Post_Template siteTitle={'Denyigba Media - Kamedefefe'} allPostsData={allPostsData} title={'Kamedefefe'} />
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const allPostsData = await  getCategoryPostsData('Kamedefefe')
     return {
       props: {

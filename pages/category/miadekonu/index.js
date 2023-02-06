@@ -8,7 +8,7 @@ export default function Miadekonu({ allPostsData }) {
     return <Post_Template siteTitle={'Denyigba Media - Míadekɔnu'} allPostsData={allPostsData} title={'Míadekɔnu'} />
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const allPostsData = await  getCategoryPostsData('Míadekɔnu')
     return {
       props: {

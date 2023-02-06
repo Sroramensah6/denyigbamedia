@@ -19,15 +19,15 @@ export default function Post({ postData, Category }) {
     )
 }
 
-export async function getStaticPaths() {
-    const paths = await getAllPostIds()
-    return {
-        paths,
-        fallback: false,
-    }
-}
+// export async function getStaticPaths() {
+//     const paths = await getAllPostIds()
+//     return {
+//         paths,
+//         fallback: false,
+//     }
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     const postData = await getPostData(params.id)
     const Category = await getCategoryRecommendationPostsData(postData.category)
     return {

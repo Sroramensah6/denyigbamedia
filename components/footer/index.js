@@ -110,27 +110,10 @@ export default function Footer() {
                 </div>
             </div>
             <hr className="my-8 border-[#F2F3F2] sm:mx-auto lg:my-4" />
-            {/* <div className="sm:flex sm:items-center sm:justify-between  font-mediumSerif"> */}
             <div className="flex flex-1 items-center font-mediumSerif">
                 <span className="text-xs text-center text-[#F2F3F2]">
                     ©  {new Date().getFullYear()}. All Right Reserved & Powered by MotherTongue® Media Consult.
                 </span>
-                {/* <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                    <div className={styles.socials}>
-                        <div className='hover:text-[#1DA1F2] hover:opacity-60'>
-                            <IoLogoTwitter />
-                        </div>
-                        <div className='hover:text-[#4267B2]'>
-                            <FaFacebook />
-                        </div>
-                        <div className='hover:text-[#0e76a8]'>
-                            <GrLinkedin />
-                        </div>
-                        <div className='hover:text-[#25D366]'>
-                            <AiOutlineWhatsApp />
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </footer>
         

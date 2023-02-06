@@ -9,7 +9,7 @@ export default function Nyadzɔdzɔwo({ allPostsData }) {
     return <Post_Template siteTitle={'Denyigba Media - Nyadzɔdzɔwo'} allPostsData={allPostsData} title={'Nyadzɔdzɔwo'} />
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const allPostsData = await  getCategoryPostsData('Nyadzɔdzɔwo')
     return {
       props: {

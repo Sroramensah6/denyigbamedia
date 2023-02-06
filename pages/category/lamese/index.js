@@ -8,7 +8,7 @@ export default function Lamese({ allPostsData }) {
     return <Post_Template siteTitle={'Denyigba Media - Lãmesẽ'} allPostsData={allPostsData} title={'Lãmesẽ'} />
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const allPostsData = await  getCategoryPostsData('Lãmesẽ')
     return {
       props: {

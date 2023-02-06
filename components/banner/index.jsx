@@ -15,7 +15,7 @@ export default function Banner() {
         <div className={styles.wrapper}>
             <div className={styles.content}>
                 <div className='space-y-5 px-6 lg:px-10 flex-[3]'>
-                    <h1 className='max-w-xl text-[3.5rem] md:text-[3.5rem] lg:text-[5rem] font-mediumSerif text-[#F2F3F2]'>Míaƒe Taɖodzinu.</h1>
+                    <h1 className='max-w-xl text-[3.5rem] md:text-[3.5rem] lg:text-[4.4rem] font-mediumSerif text-[#F2F3F2]'>Míaƒe Taɖodzinu.</h1>
                     <h3 className='text-2xl text-[#F2F3F2]'>
                         Gbegbɔgblɔ ye na wodea dzesi amewo henyaa woƒe dekɔnuwo.
                         Míaƒe kɔnu kple dekɔnuwo nye dzeside tɔxɛ na dukɔ bliboa eye
