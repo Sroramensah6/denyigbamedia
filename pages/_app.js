@@ -1,12 +1,13 @@
-import { useEffect } from "react"
 import axios from 'axios'
+import { useEffect } from "react"
+import { useRouter } from "next/router"
+import { Analytics } from '@vercel/analytics/react'
 
+import { Progress } from "../components"
 import { DataProvider } from "../context"
+import { useProgressStore } from "../store"
 
 import '../styles/globals.css'
-import { useProgressStore } from "../store"
-import { useRouter } from "next/router"
-import { Progress } from "../components"
 
 axios.defaults.baseURL = 'https://us-central1-denyigba-news.cloudfunctions.net/api'
 export default function App ({ Component, pageProps }) {
@@ -36,6 +37,7 @@ export default function App ({ Component, pageProps }) {
         <DataProvider>
             <Progress  isAnimating={isAnimating} />
             <Component {...pageProps} />
+            <Analytics />
         </DataProvider>
     )
 }
