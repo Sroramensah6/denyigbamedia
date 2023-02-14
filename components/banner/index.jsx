@@ -22,9 +22,7 @@ export default function Banner() {
                         mía degbewo wɔa akpa vevi aɖe le go sia me.
                     </h3>
                     <button className={styles.accentedButton}>
-                        <Link href={'/miafe-tadodzinu-ewe'}>
-                            Start Reading
-                        </Link>
+                        <Link href={'/miafe-tadodzinu-ewe'}>Xlēe</Link>
                     </button>
                 </div>
                 <Image 
@@ -32,7 +30,7 @@ export default function Banner() {
                     alt='Banner'
                     height={400}
                     src={banner.src}
-                    className='hidden h-72 lg:h-auto sm:inline-flex object-contain flex-1 '
+                    className='hidden h-72 lg:h-[20rem] sm:inline-flex object-contain flex-1 '
                 />
             </div>
         </div>

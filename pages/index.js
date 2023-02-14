@@ -23,7 +23,7 @@ const styles = {
 
 export default function Home ({ allPostsData }) {
   return (
-    <Layout home siteTitle={'Denyigba Media - Gɔmedzeƒe'} image={logo} description={''}>
+    <Layout home siteTitle={'Denyigba Media - Gɔmedzeƒe'} image={logo} description={'Read local news in the Ghanaian Ewe vernacular'}>
       <div className={styles.wrapper}>
         <Banner />
         <div className={styles.main}>

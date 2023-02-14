@@ -13,11 +13,11 @@ const styles = {
     postDetails: `flex-[2.5] flex flex-col`,
     detailsContainer: `flex items-center justify-between text-[#787878]`,
     articleDetails: `my-2 text-[.6rem] md:text-[.8rem] font-mediumSerif`,
-    title: `font-bold text-base md:text-2xl lg:text-lg capitalize font-mediumSerif`,
+    title: `font-bold text-xs sm:text-base md:text-2xl lg:text-lg capitalize font-mediumSerif`,
     briefing: `text-[#787878] font-italic h-[4rem] text-ellipsis overflow-hidden`,
     category: `bg-[#F2F3F2] rounded-full font-mediumSerif`,
     bookmarkContainer: `cursor-pointer`,
-    thumbnailContainer: `flex flex-[1.5]`
+    thumbnailContainer: `flex flex-[2] sm:flex-[1.5]`
 }
 
 export default function PostCard ({ post }) {
