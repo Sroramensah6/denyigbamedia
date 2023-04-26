@@ -1,8 +1,6 @@
-import Link from 'next/link'
-
 // components
 import Layout from '../components/layout'
-import { Banner,  PostCard } from '../components'
+import { Banner, Divider, MainCard, NewsCard, NewsThumbnail, SecondaryCard } from '../components'
 
 // get data
 import { getSortedPostsData } from '../lib/posts'
@@ -14,11 +12,6 @@ const styles = {
   wrapper: `mx-auto`,
   main: `flex justify-center`,
   container:`flex-1 max-w-7xl mt-[2rem]`,
-  categoryContainer: `w-1 pl-4  mb-4`,
-  divider: 'h-1 flex-1 flex w-full bg-[#F2F3F2] lg:my-16 my-10',
-  category_border: `border-b border-[#0e2b19] mt-4 border-2 flex w-10`,
-  category: `text-3xl lg:text-[3rem] font-mediumSerif hover:text-[#0e2b19]`,
-  postsList : 'grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-5 items-start'
 }
 
 export default function Home ({ allPostsData }) {
@@ -28,7 +21,15 @@ export default function Home ({ allPostsData }) {
         <Banner />
         <div className={styles.main}>
           <div className={styles.container}>
-            <div className={styles.postsList}>
+            <div className="relative mb-8 pl-3 pr-3">
+              <div className="grid grid-cols-1 sm:grid-cols-12 lg:grid-cols-12 gap-10 sm:gap-5">
+                {allPostsData.slice(0, 1).map(post => <MainCard post={post} />)}
+                <div className="sm:col-span-4 lg:col-span-3">
+                  {allPostsData.slice(1, 3).map(post => <SecondaryCard post={post} />)}
+                </div>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
               {allPostsData
                 .filter((post) => {
                   return (
@@ -38,105 +39,22 @@ export default function Home ({ allPostsData }) {
                     post.category === 'Míadekɔnu' ||
                     post.category === 'Dutanyawo'
                   )
-                }).slice(0, 6).map(post => <PostCard key={post.id} post={post} />)
+                }).slice(3, 9).map(post => <NewsCard key={post.id} post={post} />)
               }
             </div>
-            <span className={styles.divider}></span>
-            <div className={styles.space}>
-              <div className={styles.categoryContainer}>
-                <Link href={'/nyadzodzowo'}>
-                  <h1 className={styles.category}>Nyadzɔdzɔwo</h1>
-                  <span className={styles.category_border} />
-                </Link>
-              </div>
-              <div className={styles.postsList}>
-                {allPostsData
-                  .filter((post) => post.category === 'Nyadzɔdzɔwo')
-                  .slice(0, 4)
-                  .map(post => <PostCard key={post.id} post={post} />)
-                }
-              </div>
-            </div>
-            <span className={styles.divider}></span>
-            <div className={styles.space}>
-              <div className={styles.categoryContainer}>
-                <Link href={'/lamese'}>
-                  <h1 className={styles.category}>Lãmesẽ</h1>
-                  <span className={styles.category_border} />
-                </Link>
-              </div>
-              <div className={styles.postsList}>
-                {allPostsData
-                  .filter((post) => post.category === 'Lãmesẽ')
-                  .slice(0, 4)
-                  .map(post => <PostCard key={post.id} post={post} />)
-                }
-              </div>
-            </div>
-            <span className={styles.divider}></span>
-            <div className={styles.space}>
-              <div className={styles.categoryContainer}>
-                <Link href={'/asitsanyawo'}>
-                  <h1 className={styles.category}>Asitsanyawo</h1>
-                  <span className={styles.category_border} />
-                </Link>
-              </div>
-              <div className={styles.postsList}>
-                {allPostsData
-                  .filter((post) => post.category === 'Asitsanyawo')
-                  .slice(0, 4)
-                  .map(post => <PostCard key={post.id} post={post} />)
-                }
-              </div>
-            </div>
-            <span className={styles.divider}></span>
-            <div className={styles.space}>
-              <div className={styles.categoryContainer}>
-                <Link href={'/miadekonu'}>
-                  <h1 className={styles.category}>Míadekɔnu</h1>
-                  <span className={styles.category_border} />
-                </Link>
-              </div>
-              <div className={styles.postsList}>
-                {allPostsData
-                  .filter((post) => post.category === 'Míadekɔnu')
-                  .slice(0, 4)
-                  .map(post => <PostCard key={post.id} post={post} />)
-                }
-              </div>
-            </div>
-            <span className={styles.divider}></span>
-            <div className={styles.space}>
-              <div className={styles.categoryContainer}>
-                <Link href={'/dutanyawo'}>
-                  <h1 className={styles.category}>Dutanyawo</h1>
-                  <span className={styles.category_border} />
-                </Link>
-              </div>
-              <div className={styles.postsList}>
-                {allPostsData
-                  .filter((post) => post.category === 'Dutanyawo')
-                  .slice(0, 4)
-                  .map(post => <PostCard key={post.id} post={post} />)
-                }
-              </div>
-            </div>
-            <span className={styles.divider}></span>
-            <div className={styles.space}>
-              <div className={styles.categoryContainer}>
-                <Link href={'/kamedefefe'}>
-                  <h1 className={styles.category}>Kamedefefe</h1>
-                  <span className={styles.category_border} />
-                </Link>
-              </div>
-              <div className={styles.postsList}>
-                {allPostsData
-                  .filter((post) => post.category === 'Kamedefefe')
-                  .slice(0, 4)
-                  .map(post => <PostCard key={post.id} post={post} />)
-                }
-              </div>
-            </div>
+            <Divider />
+            <NewsThumbnail posts={allPostsData} title={'Nyadzɔdzɔwo'} href={'/nyadzodzowo'} />
+            <Divider />
+            <NewsThumbnail posts={allPostsData} title={'Lãmesẽ'} href={'/lamese'} />
+            <Divider />
+            <NewsThumbnail posts={allPostsData} title={'Asitsanyawo'} href={'/asitsanyawo'} />
+            <Divider />
+            <NewsThumbnail posts={allPostsData} title={'Míadekɔnu'} href={'/miadekonu'} />
+            <Divider />
+            <NewsThumbnail posts={allPostsData} title={'Dutanyawo'} href={'/dutanyawo'} />
+            <Divider />
+            <NewsThumbnail posts={allPostsData} title={'Kamedefefe'} href={'/kamedefefe'} />
+            <Divider />
           </div>
         </div>
       </div>

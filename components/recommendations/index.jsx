@@ -34,7 +34,7 @@ const styles = {
     articleDetails: `my-2 text-[.8rem] font-mediumSerif`,
 }
 
-export default function Recommendations ({ data }) {
+export default function Recommendations ({ data, id }) {
     dayjs.extend(relativeTime)
     return (
         <div className={styles.wrapper}>
