@@ -10,11 +10,12 @@ const styles = {
     title: "block font-sans text-gray-900 font-bold mb-2 hover:text-[#0e2b19] transition duration-500 ease-in-out text-md",
 }
 
-export default function NewsCard ({ post }) {
+export default function NewsCard ({ post, p }) {
+    p = p ?? true
     dayjs.extend(relativeTime)
     return (
         <Link href={`/post/${post.id}`}>
-            <div className="flex flex-col justify-between border-b pb-5 p-4">
+            <div className={`flex flex-col justify-between border-b pb-5 ${p ? 'p-4' : 'p-2'}`}>
                 <p className={styles.title}>{post.title}</p>
                 <div className="flex items-start justify-between mt-3">
                     <div className="text-sm w-2/3">
