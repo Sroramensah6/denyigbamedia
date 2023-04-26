@@ -7,8 +7,8 @@ const styles = {
     main: `flex justify-center`,
     container:`flex-1 max-w-7xl mt-[2rem]`,
     categoryContainer: `w-1 pl-4  mb-4`,
-    category_border: `border-b border-[#0e2b19] mt-2 border-2 flex w-8`,
-    category: `text-base lg:text-[2rem] font-mediumSerif hover:text-[#0e2b19]`,
+    category_border: `border-b border-[#0e2b19] border-2 flex w-8`,
+    category: `text-[2.6rem] lg:text-[2.6rem] font-mediumSerif hover:text-[#0e2b19]`,
     postsList : 'grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-5 items-start'
 }
 

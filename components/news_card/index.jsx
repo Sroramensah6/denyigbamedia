@@ -7,7 +7,7 @@ const styles = {
     category: `bg-[#F2F3F2] rounded-full font-mediumSerif`,
     detailsContainer: `flex items-center justify-between text-[#787878]`,
     articleDetails: `my-2 text-[.6rem] md:text-[.8rem] font-mediumSerif`,
-    title: `font-bold text-xs sm:text-base md:text-2xl lg:text-lg capitalize font-mediumSerif`,
+    title: "block font-sans text-gray-900 font-bold mb-2 hover:text-[#0e2b19] transition duration-500 ease-in-out text-md",
 }
 
 export default function NewsCard ({ post }) {
@@ -15,7 +15,7 @@ export default function NewsCard ({ post }) {
     return (
         <Link href={`/post/${post.id}`}>
             <div className="flex flex-col justify-between border-b pb-5 p-4">
-                <p className="text-gray-900 font-medium hover:text-[#0e2b19]">{post.title}</p>
+                <p className={styles.title}>{post.title}</p>
                 <div className="flex items-start justify-between mt-3">
                     <div className="text-sm w-2/3">
                         <p className="text-gray-700 line-clamp-2">{post.body_summary}</p>

@@ -1,6 +1,5 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import dayjs from 'dayjs'
+import Link from 'next/link'
 import relativeTime from 'dayjs/plugin/relativeTime'
 
 const styles = {
@@ -22,17 +21,17 @@ const styles = {
 export default function SecondaryCard ({ post }) {
     dayjs.extend(relativeTime)
     return (
-        <div className="mb-2">
-            <Link href={`/post/${post.id}`}>
-                <div className="h-40 bg-cover text-center overflow-hidden" style={{ backgroundImage: `url(${post.headerImage})` }} title="Woman holding a mug" />
-            </Link>
-            <Link href={`/post/${post.id}`}className="text-gray-900 inline-block font-semibold text-md my-2 hover:text-[#0e2b19] transition duration-500 ease-in-out">{post.title}</Link>
-            <div className="text-sm">
-                <p className="text-gray-700 line-clamp-2">{post.body_summary}</p>
-                <div className={styles.detailsContainer}>
-                    <span className={styles.articleDetails}>{dayjs(post.createdAt).format('MMMM DD YYYY')} • {post.reading_time} • <span className={styles.category}>{post.category}</span></span>
+        <Link href={`/post/${post.id}`}>
+            <div className="mb-2">
+                <div className="h-40 bg-cover text-center overflow-hidden" style={{ backgroundImage: `url(${post.headerImage})` }} title={post.title} />
+                <p className="font-sans text-gray-900 inline-block font-bold text-md my-2 hover:text-[#0e2b19] transition duration-500 ease-in-out">{post.title}</p>
+                <div className="text-sm">
+                    <p className="text-gray-700 line-clamp-2">{post.body_summary}</p>
+                    <div className={styles.detailsContainer}>
+                        <span className={styles.articleDetails}>{dayjs(post.createdAt).format('MMMM DD YYYY')} • {post.reading_time} • <span className={styles.category}>{post.category}</span></span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
