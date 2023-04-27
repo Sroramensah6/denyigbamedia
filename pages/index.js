@@ -32,9 +32,7 @@ export default function Home ({ allPostsData }) {
                 {allPostsData.slice(1, 3).map(post => <NewsCard key={post.id} post={post} />)}
               </div>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-              {allPostsData.slice(3, 9).map(post => <NewsCard key={post.id} post={post} />)}
-            </div>
+            <NewsThumbnail slice_start={3} slice_end={9} posts={allPostsData} />
             <Divider />
             <NewsThumbnail posts={allPostsData} title={'Nyadzɔdzɔwo'} href={'/nyadzodzowo'} />
             <Divider />
