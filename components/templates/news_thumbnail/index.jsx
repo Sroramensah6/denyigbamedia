@@ -5,11 +5,11 @@ import NewsCard from '../../news_card'
 const styles = {
     wrapper: `mx-auto`,
     main: `flex justify-center`,
+    categoryContainer: `w-80 pl-4  mb-6`,
     container:`flex-1 max-w-7xl mt-[2rem]`,
-    categoryContainer: `w-1 pl-4  mb-4`,
+    postsList : 'grid sm:grid-cols-2 lg:grid-cols-3 gap-10',
     category_border: `border-b border-[#0e2b19] border-2 flex w-8`,
     category: `text-[2.6rem] lg:text-[2.6rem] font-mediumSerif hover:text-[#0e2b19]`,
-    postsList : 'grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-5 items-start'
 }
 
 export default function NewsThumbnail ({ title, posts, href }) {

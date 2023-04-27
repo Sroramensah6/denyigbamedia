@@ -1,4 +1,3 @@
-import Progress from './progress/index';
 export { default as Header } from './header'
 export { default as Banner } from './banner'
 export { default as Article } from './article'
