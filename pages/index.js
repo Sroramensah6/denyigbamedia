@@ -23,9 +23,9 @@ export default function Home ({ allPostsData }) {
           <div className={styles.container}>
             <div className="relative mb-8 pl-3 pr-3">
               <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-5">
-                {allPostsData.slice(0, 1).map(post => <MainCard post={post} />)}
+                {allPostsData.slice(0, 1).map(post => <MainCard key={post.id} post={post} />)}
                 <div className="sm:col-span-4 hidden lg:block sm:grid-cols-2 lg:col-span-3">
-                  {allPostsData.slice(1, 3).map(post => <SecondaryCard post={post} />)}
+                  {allPostsData.slice(1, 3).map(post => <SecondaryCard key={post.id} post={post} />)}
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:grid lg:hidden ">

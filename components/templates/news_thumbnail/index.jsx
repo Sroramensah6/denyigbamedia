@@ -15,12 +15,14 @@ const styles = {
 export default function NewsThumbnail ({ title, posts, href }) {
     return (
         <div className={styles.space}>
-            <div className={styles.categoryContainer}>
-                <Link href={href}>
-                    <h1 className={styles.category}>{title}</h1>
-                    <span className={styles.category_border} />
-                </Link>
-            </div>
+            {title && (
+                <div className={styles.categoryContainer}>
+                    <Link href={href}>
+                        <h1 className={styles.category}>{title}</h1>
+                        <span className={styles.category_border} />
+                    </Link>
+                </div>
+            )}
             <div className={styles.postsList}>
                 {posts.filter((post) => (post.category === `${title}`)).slice(0, 4).map(post => <NewsCard key={post.id} post={post} />)}
             </div>
