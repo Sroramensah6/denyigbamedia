@@ -25,7 +25,7 @@ const styles = {
     accentedButton: 'bg-black text-white py-2 px-4 rounded-full',
     logo_sm: 'cursor-pointer object-contain block h-20 w-auto lg:hidden',
     logo_lg: 'cursor-pointer object-contain hidden h-20 w-auto lg:block',
-    bannerNav: 'flex cursor-pointer items-center space-x-5 text-[#F2F3F2] font-mediumSerif',
+    bannerNav: 'flex cursor-pointer items-center space-x-5 text-[#F2F3F2] font-poppins',
 }
 
 function classNames(...classes) {
@@ -82,7 +82,7 @@ export default function Example() {
                                             href={item.route}
                                             className={classNames(
                                                 router.pathname == item.route ? 'bg-[#F2F3F2] text-[#0e2b19]' : 'text-[#F2F3F2] hover:bg-[#F2F3F2] hover:text-[#0e2b19]',
-                                            'px-3 py-2 rounded-md text-sm font-medium font-mediumSerif'
+                                            'px-3 py-2 rounded-md lg:text-xs font-medium font-poppins'
                                             )}
                                             aria-current={router.pathname == item.route ? 'page' : undefined}
                                         >
@@ -102,7 +102,7 @@ export default function Example() {
                                     href={item.route}
                                     className={classNames(
                                         router.pathname == item.route ?  'bg-[#F2F3F2] text-[#0e2b19]' : 'text-[#F2F3F2] hover:bg-[#F2F3F2] hover:text-[#0e2b19]',
-                                        'block px-3 py-2 rounded-md text-base font-medium font-mediumSerif'
+                                        'block px-3 py-2 rounded-md text-base font-medium font-poppins'
                                     )}
                                     aria-current={router.pathname == item.route ?  'page' : undefined}
                                 >

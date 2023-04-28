@@ -9,7 +9,7 @@ const styles = {
     container:`flex-1 max-w-7xl mt-[2rem]`,
     postsList : 'grid sm:grid-cols-2 lg:grid-cols-3 gap-10',
     category_border: `border-b border-[#0e2b19] border-2 flex w-8`,
-    category: `text-[2.6rem] lg:text-[2.6rem] font-mediumSerif hover:text-[#0e2b19]`,
+    category: `font-poppins text-[2rem] lg:text-[2.2rem] hover:text-[#0e2b19]`,
 }
 
 export default function NewsThumbnail ({ title, posts, href }) {

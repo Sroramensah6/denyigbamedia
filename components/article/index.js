@@ -20,16 +20,16 @@ const styles = {
     authorProfileImageContainer: `h-[3rem] w-[3rem] grid center rounded-full overflow-hidden`,
     authorProfileImage: `object-cover`,
     column: `flex flex-col flex-1 justify-center`,
-    postDetails: `block md:flex gap-[.2rem] text-[#787878] font-mediumSerif space-y-3 md:space-y-0 capitalize`,
+    postDetails: `text-xs block md:flex gap-[.2rem] text-[#787878] font-poppins space-y-3 md:space-y-0 capitalize`,
     listenButton: `flex items-center gap-[.2rem] text-[#1A8917] cursor-pointer`,
     socials: `flex gap-[1rem] text-[#787878] cursor-pointer md:py-0 py-3`,
     space: `w-[.5rem]`,
     articleMainContainer: `flex flex-col gap-[1rem]`,
     bannerContainer: `h-[28rem] w-full grid center overflow-hidden mb-[2rem]`,
     bannerImage: `object-cover h-auto w-full flex flex-1 `,  
-    title: `font-bold text-3xl font-mediumSerif`,
-    subtitle: `font-mediumSerifItalic text-[1.4rem] text-[#292929] font-mediumSerif`,
-    article: `font-mediumSerif text-[#292929] text-[1.4rem]`,
+    title: `text-[2rem] font-poppins font-medium`,
+    subtitle: `font-mediumSerifItalic text-[1.4rem] text-[#292929] font-poppins`,
+    article: `font-poppins text-[#292929] text-[1.4rem]`,
 }
 
 export default function Article({ data, origin }) {

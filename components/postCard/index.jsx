@@ -5,19 +5,19 @@ import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 
 const styles = {
-    wrapper: `flex max-w-[46rem] h-[10rem] items-center gap-[1rem] cursor-pointer p-4` ,
-    authorContainer: `flex items-center`,
-    authorImage: `object-cover`,
     authorName: `font-semibold`,
-    authorImageContainer: `grid place-items-center rounded-full overflow-hidden h-[1.4rem] w-[1.4rem]`,
-    postDetails: `flex-[2.5] flex flex-col`,
-    detailsContainer: `flex items-center justify-between text-[#787878]`,
-    articleDetails: `my-2 text-[.6rem] md:text-[.8rem] font-mediumSerif`,
-    title: `font-bold text-xs sm:text-base md:text-2xl lg:text-lg capitalize font-mediumSerif`,
-    briefing: `text-[#787878] font-italic h-[4rem] text-ellipsis overflow-hidden`,
-    category: `bg-[#F2F3F2] rounded-full font-mediumSerif`,
+    authorImage: `object-cover`,
     bookmarkContainer: `cursor-pointer`,
-    thumbnailContainer: `flex flex-[2] sm:flex-[1.5]`
+    authorContainer: `flex items-center`,
+    category: `bg-[#F2F3F2] rounded-full`,
+    postDetails: `flex-[2.5] flex flex-col`,
+    thumbnailContainer: `flex flex-[2] sm:flex-[1.5]`,
+    articleDetails: `my-2 text-[.6rem] md:text-[.8rem]`,
+    detailsContainer: `flex items-center justify-between text-[#787878]`,
+    title: `font-bold text-xs sm:text-base md:text-2xl lg:text-lg capitalize`,
+    briefing: `text-[#787878] font-italic h-[4rem] text-ellipsis overflow-hidden`,
+    wrapper: `flex max-w-[46rem] h-[10rem] items-center gap-[1rem] cursor-pointer p-4`,
+    authorImageContainer: `grid place-items-center rounded-full overflow-hidden h-[1.4rem] w-[1.4rem]`,
 }
 
 export default function PostCard ({ post }) {

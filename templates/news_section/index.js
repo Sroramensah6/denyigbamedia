@@ -11,7 +11,7 @@ const styles = {
     main: `flex justify-center`,
     categoryContainer: `w-20 mb-10`,
     container:`flex-1 max-w-7xl mt-[2rem]`,
-    category: `text-[3rem] font-mediumSerif mb-4 text-[#0e2b19] border-b border-[#0e2b19]`,
+    category: `text-[3rem] mb-4 text-[#0e2b19] border-b border-[#0e2b19]`,
     postsList : 'grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-5 items-start'
 }
   

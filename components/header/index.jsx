@@ -13,7 +13,7 @@ const styles = {
     wrapper: 'flex justify-center gap-10 p-5 bg-[#0e2b19]',
     content: 'max-w-7xl flex flex-1 justify-between gap-10',
     accentedButton: 'bg-black text-white py-2 px-4 rounded-full',
-    bannerNav: 'flex cursor-pointer items-center space-x-5 text-[#F2F3F2] font-mediumSerif',
+    bannerNav: 'flex cursor-pointer items-center space-x-5 text-[#F2F3F2] font-poppins',
 }
 
 export default function Header() {
