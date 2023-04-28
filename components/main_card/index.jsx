@@ -24,12 +24,12 @@ export default function MainCard ({ post }) {
     return (
         <div className="sm:col-span-8 lg:col-span-9">
             <Link href={`/post/${post.id}`}>
-                <div className="bg-cover text-center 2xl:h-[500px] md:h-[500px] sm:h-[300px] h-[400px] overflow-hidden" style={{ backgroundImage: `url(${post.headerImage})` }} title={post.title} />
+                <div className="bg-contain md:bg-cover  text-center 2xl:h-[550px] md:h-[550px] sm:h-[450px] h-[300px] overflow-hidden" style={{ backgroundImage: `url(${post.headerImage})` }} title={post.title} />
                 <div className="mt-3 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
                     <div className="">
-                        <p className="block font-poppins text-gray-900 font-medium text-3xl mb-2 hover:text-[#0e2b19] transition duration-500 ease-in-out">{post.title}</p>
+                        <p className="block font-poppins line-clamp-2 text-gray-900 font-medium text-lg lg:text-3xl mb-2 hover:text-[#0e2b19] transition duration-500 ease-in-out">{post.title}</p>
                         <div className="text-base">
-                            <p className="text-gray-700 line-clamp-3 font-poppins">{post.body_summary}</p>
+                            <p className="text-gray-700 line-clamp-3 font-poppins text-sm lg:text-base">{post.body_summary}</p>
                             <div className={styles.detailsContainer}>
                                 <span className={styles.articleDetails}>{dayjs(post.createdAt).format('MMMM DD YYYY')} • {post.reading_time} • <span className={styles.category}>{post.category}</span></span>
                             </div>

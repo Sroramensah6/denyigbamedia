@@ -7,7 +7,7 @@ const styles = {
     category: `bg-[#F2F3F2] rounded-full`,
     articleDetails: `my-3 text-xs`,
     detailsContainer: `flex items-center justify-between text-[#787878]`,
-    title: "block font-poppins text-gray-900 font-medium mb-2 hover:text-[#0e2b19] transition duration-500 ease-in-out text-md",
+    title: "block line-clamp-2 font-poppins text-gray-900 font-medium mb-2 hover:text-[#0e2b19] transition duration-500 ease-in-out text-md",
 }
 
 export default function NewsCard ({ post, p }) {

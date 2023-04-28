@@ -10,13 +10,6 @@ import Logo from '../images/logo1.png'
 
 import { main_link } from '../route'
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
-
 const styles = {
     text: 'hover:opacity-50 hover:border-b',
     logoContainer: 'flex items-center flex-start',

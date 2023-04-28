@@ -24,7 +24,7 @@ export default function SecondaryCard ({ post }) {
         <Link href={`/post/${post.id}`}>
             <div className="mb-2">
                 <div className="h-40 bg-cover text-center overflow-hidden" style={{ backgroundImage: `url(${post.headerImage})` }} title={post.title} />
-                <p className="text-gray-900 inline-block font-medium text-md my-2 hover:text-[#0e2b19] transition duration-500 ease-in-out font-poppins">{post.title}</p>
+                <p className="text-gray-900 line-clamp-2 inline-block font-medium text-md my-2 hover:text-[#0e2b19] transition duration-500 ease-in-out font-poppins">{post.title}</p>
                 <div className="text-sm">
                     <p className="text-gray-700 line-clamp-2 font-poppins">{post.body_summary}</p>
                     <div className={styles.detailsContainer}>

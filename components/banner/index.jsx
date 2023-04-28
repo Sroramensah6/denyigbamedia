@@ -5,8 +5,8 @@ import Image from 'next/image'
 import banner from '../../images/icon.png'
 
 const styles = {
-    accentedButton: 'bg-black text-white py-2 px-4 rounded-full text-sm font-poppins',
     content: 'max-w-7xl flex-1 flex items-center justify-between mb-10',
+    accentedButton: 'bg-black text-white py-2 px-4 rounded-full text-sm font-poppins',
     wrapper: 'h-max-[10rem] flex items-center justify-center bg-[#0e2b19] border-y border-black opacity-95',
 }
 

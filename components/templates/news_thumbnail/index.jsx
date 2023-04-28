@@ -12,7 +12,10 @@ const styles = {
     category: `font-poppins text-[2rem] lg:text-[2.2rem] hover:text-[#0e2b19]`,
 }
 
-export default function NewsThumbnail ({ title, posts, href }) {
+export default function NewsThumbnail ({ title, posts, href, compare, slice_start, slice_end }) {
+    slice_end = slice_end ?? 6
+    slice_start = slice_start ?? 0
+
     return (
         <div className={styles.space}>
             {title && (
@@ -24,7 +27,7 @@ export default function NewsThumbnail ({ title, posts, href }) {
                 </div>
             )}
             <div className={styles.postsList}>
-                {posts.filter((post) => (post.category === `${title}`)).slice(0, 4).map(post => <NewsCard key={post.id} post={post} />)}
+                {posts.filter((post) => compare !== undefined ? post.category === `${compare}` : post).slice(slice_start, slice_end).map(post => <NewsCard key={post.id} post={post} />)}
             </div>
         </div>
     )
