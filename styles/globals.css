@@ -24,7 +24,7 @@ a {
 p:nth-of-type(2)::first-letter  {
   font-family: GH Guardian Headline,Guardian Egyptian Web,Georgia,serif;
   font-size: 6.625rem;
-  line-height: 1.15;
+  line-height: 0.6;
   font-weight: 500;
   --source-text-decoration-thickness: 5px;
   float: left;
